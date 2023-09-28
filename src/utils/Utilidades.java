@@ -198,12 +198,10 @@ public class Utilidades {
 	
 	static public double aleatorio(int min, int max) {
 		Random r = new Random();
-		
 		//compruebaErrorMinMax(min,max);
 		//double n=Math.random();
 		double n= r.nextDouble(min,max);
-		
-		//n=(n*(max-min))+min;		
+		//n=(n*(max-min))+min;	
 		return n;	
 	}
 
