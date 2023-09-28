@@ -252,7 +252,6 @@ public class Utilidades {
 
 	
 	
-	
 //	static public double aleatorio(int min, int max) {
 //		Random r = new Random();
 //		//compruebaErrorMinMax(min,max);
