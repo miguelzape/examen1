@@ -200,7 +200,7 @@ public class Utilidades {
 	* Escribe en pantalla los arrays del string en forma de menu (uno en
     * cada linea con el numero de opcion delante) y espera a que el usuario
 	* elija una opcion. Si la opcion elejida no esta dentro de rango valido
-	* se da un aviso y se vuelve a solicitar
+	* se da un aviso y se vuelve a solicitar.
 	* @param cabecera texto que encabeza el menu
 	* @param opciones Array de String con las opciones del menu.(SIN NUMEROS DE OPCIONES)
 	* @return Int con la opcion del menu seleccionada .      
