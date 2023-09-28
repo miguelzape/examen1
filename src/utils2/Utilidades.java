@@ -196,6 +196,63 @@ public class Utilidades {
 		return (generaMenu(opciones.split("\n")));
 	}
 	
+	/**
+	* Escribe en pantalla los arrays del string en forma de menu (uno en
+    * cada linea con el numero de opcion delante) y espera a que el usuario
+	* elija una opcion. Si la opcion elejida no esta dentro de rango valido
+	* se da un aviso y se vuelve a solicitar
+	* @param cabecera texto que encabeza el menu
+	* @param opciones Array de String con las opciones del menu.(SIN NUMEROS DE OPCIONES)
+	* @return Int con la opcion del menu seleccionada .      
+	*/
+	static public int generaMenu(String cabecera, String opciones[]) {
+		int longitud=opciones.length;
+				
+		System.out.println(cabecera);
+		for (int i=0;i<longitud;i++) {
+			System.out.println((i+1)+". "+opciones[i]);
+		}
+		return (pideNumero("\nElija una opción",1,longitud)); 
+	}
+	
+	/**
+	* Escribe en pantalla los arrays del string en forma de menu (uno en
+    * cada linea con el numero de opcion delante) y espera a que el usuario
+	* elija una opcion. Si la opcion elejida no esta dentro de rango valido
+	* se da un aviso y se vuelve a solicitar
+	* @param cabecera texto que encabeza el menu
+	* @param opciones Array de String con las opciones del menu.(SIN NUMEROS DE OPCION)
+	* @param salida texto para la ultima opcion del menu
+	* @return Int con la opcion del menu seleccionada .      
+	*/
+	static public int generaMenu(String cabecera, String opciones[], String salida) {
+		int longitud=opciones.length;
+				
+		System.out.println(cabecera);
+		for (int i=0;i<longitud;i++) {
+			System.out.println((i+1)+". "+opciones[i]);
+		}
+		System.out.println((longitud+1) +". " + salida);
+		return (pideNumero("\nElija una opción",1,longitud+1)); 
+	}
+	
+	/**
+	* Escribe en pantalla los arrays del string en forma de menu (uno en
+    * cada linea con el numero de opcion delante) y espera a que el usuario
+	* elija una opcion. Si la opcion elejida no esta dentro de rango valido
+	* se da un aviso y se vuelve a solicitar
+	* @param cabecera texto que encabeza el menu
+	* @param opciones String con las opciones del menu separadas por '\n'. (SIN NUMEROS DE OPCION)
+	* @param salida texto para la ultima opcion del menu
+	* @return Int con la opcion del menu seleccionada .      
+	*/
+	static public int generaMenu(String cabecera, String opciones, String salida) {
+		return (generaMenu(cabecera,opciones.split("\n"),salida));
+	}
+
+	
+	
+	
 	static public double aleatorio(int min, int max) {
 		Random r = new Random();
 		//compruebaErrorMinMax(min,max);
