@@ -1,6 +1,5 @@
 package utils2;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Utilidades {
@@ -155,13 +154,14 @@ public class Utilidades {
 	*/
 	static void compruebaErrorMinMax(int min, int max) {
 		if (min >= max) {
-			int error;
+			//int error;
 			String origen = new String (Thread.currentThread().getStackTrace()[2].getMethodName());
-			System.out.println("Error al usar " + origen + 
-					". El valor MIN debe ser menor que MAX");
+			//System.out.println("Error al usar " + origen + ". El valor MIN debe ser menor que MAX");
 			  /*se hace una division entre cero para generar un error y 
 			  que se detenga el programa. Lo hago porque hay un fallo en la programacion*/
-			error=1/0;
+			//error=1/0;
+			throw new ArithmeticException("Error al usar " + origen + 
+					". El valor MIN debe ser menor que MAX");
 		}
 	}
 	
@@ -250,7 +250,6 @@ public class Utilidades {
 		return (generaMenu(cabecera,opciones.split("\n"),salida));
 	}
 
-	
 	
 //	static public double aleatorio(int min, int max) {
 //		Random r = new Random();

@@ -6,9 +6,9 @@ public class examen1Main {
 
 	public static void main(String[] args) {
 		
-		final String MENU[]= {"uno","dos","tres"};
+		final String MENU[]= {"uno","dos","tres","salir"};
 		
-		Utilidades.generaMenu("Menu de prueba",MENU,"Esta es la opcion final");
+		Utilidades.generaMenu("Menu de prueba",MENU);
 		// TODO Auto-generated method stub
 	
 
