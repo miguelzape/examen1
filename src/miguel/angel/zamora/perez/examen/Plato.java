@@ -5,7 +5,7 @@ public class Plato {
 	private float precio;
 	private boolean disponible;
 
-	// Constructor de la clase
+	// Constructor de la clase.
 	public Plato(String nombre, float precio, boolean disponible) {
 		super();
 		this.nombre = nombre;
@@ -14,7 +14,7 @@ public class Plato {
 	}
 	
 
-	// Funciones get para cada mienbro de la clase
+	// Funciones get para cada mienbro de la clase.
 	public String getNombre() {
 		return nombre;
 	}

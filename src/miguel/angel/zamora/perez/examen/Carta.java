@@ -34,7 +34,7 @@ public class Carta {
 	}
 
 	// "importeCarta" devuelve el importe total de la carta
-	// no incluye el coste de los platos "no disponibles"
+	// no incluye el coste de los platos "no disponibles".
 	public float importeCarta() {
 		float total = 0;
 		for (Plato p : this.platos) {
@@ -50,7 +50,7 @@ public class Carta {
 
 	}
 
-	// Funciones get para cada mienbro de la clase
+	// Funciones get para cada mienbro de la clase.
 	public String getNombre() {
 		return nombre;
 	}

@@ -15,7 +15,7 @@ public class Restaurante {
 
 	}
 	
-	// Constructor de la clase
+	// Constructor de la clase.
 	public Restaurante(String nombre) {
 		super();
 		this.nombre = nombre;
