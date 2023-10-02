@@ -20,7 +20,7 @@ public class Carta {
 	}
 
 	public void mostrarCarta() {
-		System.out.printf("\nLa carta %s\n",this.nombre);
+		System.out.printf("\nLa carta %s\n", this.nombre);
 		System.out.println("Platos:");
 		for (Plato p : this.platos) {
 			if (p.isDisponible())
@@ -30,6 +30,20 @@ public class Carta {
 		for (Bebida b : this.bebidas) {
 			System.out.println(b);
 		}
+	}
+
+	public float importeCarta() {
+		float total = 0;
+		for (Plato p : this.platos) {
+			if (p.isDisponible())
+				total += p.getPrecio();
+		}
+
+		for (Bebida b : this.bebidas) {
+			total += b.getPrecio();
+		}
+
+		return total;
 
 	}
 
@@ -44,7 +58,5 @@ public class Carta {
 	public Bebida[] getBebidas() {
 		return bebidas;
 	}
-	
-	
 
 }
