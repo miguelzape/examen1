@@ -4,8 +4,8 @@ import utils2.Utilidades;
 
 public class Restaurante {
 
-	final boolean DISPONIBLE = true;
-	final boolean NO_DISPONIBLE = false;
+	private final boolean DISPONIBLE = true;
+	private final boolean NO_DISPONIBLE = false;
 	private String nombre;
 
 	public static void main(String[] args) {
@@ -65,10 +65,6 @@ public class Restaurante {
 		}
 		return Utilidades.pideNumero("\nSeleccione una de las cartas", 1, cartasDisponibles.length) - 1;
 
-	}
-
-	
-	
-	
+	}	
 
 }
