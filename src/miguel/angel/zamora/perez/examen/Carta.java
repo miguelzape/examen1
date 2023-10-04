@@ -6,11 +6,10 @@ public class Carta {
 	private Plato platos[];
 	private Bebida bebidas[];
 
-
 	// Constructor de la clase
-	// necesita el nombre, un array con los platos, y al final las bebidas 
-	// (de una en una o dentro de un array) 
-	
+	// necesita el nombre, un array con los platos, y al final las bebidas
+	// (de una en una o dentro de un array)
+
 	public Carta(String nombre, Plato[] platos, Bebida... bebidas) {
 		super();
 		this.nombre = nombre;
@@ -19,18 +18,26 @@ public class Carta {
 	}
 
 	// "mostraCarta" muestra por pantalla los platos que incluye esta carta
-	// tambien podria mostar las bebidas si fuera necesario 
-	// quitando los comentarios de las ultimas lineas
-	public void mostrarCarta(int numero) {
-		System.out.printf("\nPlatos de Carta %d: \"%s\"\n",numero,this.nombre);
+	// tambien podria mostar las bebidas si fuera necesario
+	// poniendo el segundo parametro a true.
+
+	public void mostrarCarta(int numero, boolean cartaCompleta) {
+		System.out.printf("\nPlatos de Carta %d: \"%s\"\n", numero, this.nombre);
 		for (Plato p : this.platos) {
 			if (p.isDisponible())
-				System.out.println("\t"+p.getNombre());
+				System.out.println("\t" + p.getNombre());
 		}
-	/*	System.out.println("Bebidas:");
-		for (Bebida b : this.bebidas) {
-			System.out.println("\t"+b.getNombre());
-		}*/
+		if (cartaCompleta) {
+			System.out.println("Bebidas:");
+			for (Bebida b : this.bebidas) {
+				System.out.println("\t" + b.getNombre());
+			}
+		}
+	}
+
+	// "mostraCarta" muestra por pantalla los platos que incluye esta carta
+	public void mostrarCarta(int numero) {
+		mostrarCarta(numero, false);
 	}
 
 	// "importeCarta" devuelve el importe total de la carta

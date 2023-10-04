@@ -61,7 +61,7 @@ public class Restaurante {
 	private int seleccionarCarta(Carta[] cartasDisponibles) {
 		System.out.println("Estas son las cartas disponibles");
 		for (int i = 0; i < cartasDisponibles.length; i++) {
-			cartasDisponibles[i].mostrarCarta(i + 1);
+			cartasDisponibles[i].mostrarCarta(i + 1,true);
 		}
 		return Utilidades.pideNumero("\nSeleccione una de las cartas", 1, cartasDisponibles.length) - 1;
 
